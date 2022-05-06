@@ -1,0 +1,157 @@
+/* This file handles media queries for the website */
+
+// handles html look when the scren is <= 600 pixels wide
+// reset to 620px to as an easier fix for about-section control
+@media screen and (max-width: 620px) {
+
+    /* HEADER SECTION */
+    header {
+        padding: 0;
+    }
+
+    header .right-header {
+        padding: 0 !important;
+    }
+
+    .header-content {
+        grid-template-columns: 1fr;
+        padding-bottom: 6rem;
+
+        .left-header {
+
+            .header-shape {
+                display: none;
+            }
+
+            .image {
+                margin: 0 auto;
+                width: 90%;
+            }
+        }
+
+        .right-header {
+            grid-row: 1; // set before left-header in a column
+            width: 90%;
+            margin: 0 auto; // center content
+
+            .name {
+                font-size: 2.5rem !important;
+            }
+        }
+    }
+
+    .section {
+        padding: 3rem;
+        padding-left: 1rem;
+    }
+
+    /* ABOUT SECTION */
+    .about-container {
+
+        .right-about {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .timeline {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 2rem;
+    }
+
+    /* PORTFOLIO SECTION */
+    .portfolios {
+        grid-template-columns: 1fr !important;
+
+        .portfolio-item {
+            
+            img {
+                min-width: 100px !important;
+            }
+        }
+    }
+
+    /* BUTTONS AND CONTROLS */
+    .theme-btn-con {
+        width: 50px;
+        height: 50px;
+
+        .theme-btn {
+            width: 50px;
+            height: 50px;
+            padding-top: 9px;
+        }
+    }
+
+    .controls {
+        top: auto;
+        bottom: 0; // set controls at bottom
+        flex-direction: row;
+        justify-content: center; // set controls in center
+        left: 50%; // readjust for center due to button amount
+        transform: translateX(-50%); // readjust
+        width: 100%;
+
+        .control {
+            margin: 1rem 1.3rem;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.6);
+        }
+    }
+}
+
+
+// handles html look when the scren is <= 1000 pixels wide
+@media screen and (max-width: 1000px) {
+
+    /* ABOUT SECTION */
+    .about-container {
+        grid-template-columns: 1fr;
+
+        .right-about {
+            padding-top: 2.5rem;
+            width: 90%;
+        }
+
+        .left-about {
+            // correcting for grid-change
+            padding-right: 0;
+
+            p {
+                padding-left: 0;
+            }
+
+            grid-row: 1;
+            grid-column: 1;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+        }
+    }
+
+    /* PORTFOLIO SECTION */
+    .portfolios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* BLOG SECTION */
+    .blog-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* CONTACT SECTION */
+    .contact-container {
+        flex-direction: column;
+
+        .right-contact {
+            // top, bottom, right, left
+            padding: 2rem 2rem 4rem 0;
+            margin-left: 0 !important;
+
+            .contact-form {
+                box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+                border-radius: 15px;
+                padding: 2rem 4rem;
+                width: 120%;
+            }
+        }
+    }
+}
