@@ -13,4 +13,5 @@
 .personal/
 
 # Local changelog (not versioned)
+.idea/
 changes.md
