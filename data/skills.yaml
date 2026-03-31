@@ -1,0 +1,22 @@
+# Skill bars: width is 0–100 (visual only; edit to match your story)
+- name: Go
+  percent: 85
+  class: go
+- name: TypeScript
+  percent: 80
+  class: typescript
+- name: JavaScript
+  percent: 78
+  class: javascript
+- name: HTML & CSS
+  percent: 82
+  class: html
+- name: React
+  percent: 72
+  class: react
+- name: Python
+  percent: 75
+  class: python
+- name: AWS
+  percent: 55
+  class: aws

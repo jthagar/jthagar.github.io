@@ -1,0 +1,124 @@
+@media screen and (max-width: 620px) {
+  header {
+    padding: 0;
+  }
+
+  header .right-header {
+    padding: 0 !important;
+  }
+
+  .header-content {
+    grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+
+    .left-header {
+      .header-shape {
+        display: none;
+      }
+
+      .image {
+        margin: 0 auto;
+        width: 90%;
+      }
+    }
+
+    .right-header {
+      grid-row: 1;
+      width: 90%;
+      margin: 0 auto;
+
+      .name {
+        font-size: 2.5rem !important;
+      }
+    }
+  }
+
+  .section {
+    padding: 3rem 1rem 5rem;
+  }
+
+  .about-container .right-about {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    grid-template-columns: 1fr;
+    margin: 0 2rem;
+  }
+
+  .portfolios {
+    grid-template-columns: 1fr !important;
+
+    .portfolio-item img {
+      min-width: 100px !important;
+    }
+  }
+
+  .theme-btn-con {
+    width: 50px;
+    height: 50px;
+    padding: 0.75rem;
+  }
+
+  .controls {
+    top: auto;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 0.5rem 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.35));
+
+    .control {
+      margin: 0.5rem 0.75rem;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.6);
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .about-container {
+    grid-template-columns: 1fr;
+
+    .right-about {
+      padding-top: 2.5rem;
+      width: 90%;
+    }
+
+    .left-about {
+      padding-right: 0;
+      grid-row: 1;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+
+      p {
+        padding-left: 0;
+      }
+    }
+  }
+
+  .portfolios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blog-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-container {
+    flex-direction: column;
+
+    .right-contact {
+      padding: 0 0 2rem;
+      margin-left: 0 !important;
+      width: 100%;
+
+      .contact-actions {
+        max-width: none;
+      }
+    }
+  }
+}

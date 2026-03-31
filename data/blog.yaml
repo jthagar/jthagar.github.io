@@ -1,0 +1,6 @@
+# Optional featured links (external posts or placeholders)
+- title: "Building static sites with Hugo"
+  summary: "Structure, content, and deploy pipelines for fast, maintainable sites."
+  image: "/img/blog-placeholder.svg"
+  url: "https://gohugo.io/documentation/"
+  external: true

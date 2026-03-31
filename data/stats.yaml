@@ -1,0 +1,7 @@
+# Hero / about stat tiles
+- value: "6+"
+  label: "Projects shipped"
+- value: "5+"
+  label: "Core languages"
+- value: "5+"
+  label: "Years building software"

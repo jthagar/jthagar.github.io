@@ -1,0 +1,15 @@
+- icon: graduation-cap
+  duration: "2014 — 2018"
+  title: "Anthropology"
+  org: "University of Arkansas"
+  body: "Undergraduate work in anthropology before focusing on computing."
+- icon: graduation-cap
+  duration: "2019 — 2022"
+  title: "Computer Science"
+  org: "University of North Texas"
+  body: "B.S. Computer Science; coursework in algorithms, systems, and software engineering."
+- icon: briefcase
+  duration: "2022 — present"
+  title: "Developer"
+  org: "Freelance & projects"
+  body: "Web and tooling projects; open-source contributions and portfolio work."

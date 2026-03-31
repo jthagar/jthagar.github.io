@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Lang }}">
+<head>
+  {{- partial "head.html" . -}}
+</head>
+<body class="main-content">
+  <a class="skip-link" href="#home">Skip to content</a>
+  {{- block "main" . }}{{ end -}}
+  {{- partial "nav-controls.html" . -}}
+  {{- partial "theme-toggle.html" . -}}
+  {{- partial "scripts.html" . -}}
+</body>
+</html>

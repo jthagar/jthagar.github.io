@@ -1,0 +1,207 @@
+{{ define "main" }}
+<header class="section sec1 header active" id="home">
+  <div class="header-content">
+    <div class="left-header">
+      <div class="header-shape" aria-hidden="true"></div>
+      <div class="image">
+        <img src="{{ "img/avatar.svg" | relURL }}" width="400" height="480" alt="{{ site.Params.author }}">
+      </div>
+    </div>
+    <div class="right-header">
+      <h1 class="name">
+        <span class="accent">{{ site.Params.author }}</span>
+      </h1>
+      <p class="subtitle">{{ site.Params.tagline }}</p>
+      <p class="lead">{{ site.Params.intro }}</p>
+      <div class="btn-con">
+        {{ if site.Params.cvURL }}
+        <a href="{{ site.Params.cvURL }}" class="main-btn" download>
+          <span class="btn-text">Download CV</span>
+          <span class="btn-icon"><i class="fas fa-download" aria-hidden="true"></i></span>
+        </a>
+        {{ else }}
+        <a href="{{ printf "mailto:%s" site.Params.email }}" class="main-btn">
+          <span class="btn-text">Get in touch</span>
+          <span class="btn-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="section sec2 about" id="about">
+    <div class="about-content">
+      <div class="main-title">
+        <h2>About <span>me</span><span class="bg-text">my stats</span></h2>
+      </div>
+      <div class="about-container">
+        <div class="left-about">
+          <h4>Information about me</h4>
+          <p>{{ site.Params.about_lead }}</p>
+          <div class="btn-con">
+            {{ if site.Params.cvURL }}
+            <a href="{{ site.Params.cvURL }}" class="main-btn" download>
+              <span class="btn-text">Download CV</span>
+              <span class="btn-icon"><i class="fas fa-download" aria-hidden="true"></i></span>
+            </a>
+            {{ else }}
+            <a href="{{ site.Params.github }}" class="main-btn" target="_blank" rel="noopener noreferrer">
+              <span class="btn-text">View GitHub</span>
+              <span class="btn-icon"><i class="fab fa-github" aria-hidden="true"></i></span>
+            </a>
+            {{ end }}
+          </div>
+        </div>
+        <div class="right-about">
+          {{ range site.Data.stats }}
+          <div class="about-item">
+            <div class="about-text">
+              <p class="large-text">{{ .value }}</p>
+              <p class="small-text">{{ .label }}</p>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+      <div class="about-stats">
+        <h4 class="stat-title">Skills</h4>
+        <div class="progress-bars">
+          {{ range site.Data.skills }}
+          <div class="progress-bar">
+            <p class="prog-title">{{ .name }}</p>
+            <div class="prog-container">
+              <p class="prog-text">{{ .percent }}%</p>
+              <div class="progress">
+                <span class="progress-fill" style="width: {{ .percent }}%"></span>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+      <h4 class="stat-title">Timeline</h4>
+      <div class="timeline">
+        {{ range site.Data.timeline }}
+        <div class="timeline-item">
+          <div class="tl-icon">
+            <i class="fas fa-{{ .icon }}" aria-hidden="true"></i>
+          </div>
+          <p class="tl-duration">{{ .duration }}</p>
+          <h5>{{ .title }}<span> — {{ .org }}</span></h5>
+          <p>{{ .body }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  <section class="section sec3 portfolio" id="portfolio">
+    <div class="main-title">
+      <h2>My <span>Portfolio</span><span class="bg-text">My work</span></h2>
+    </div>
+    <p class="portfolio-text">
+      Selected projects and repositories. Replace placeholders in <code>data/projects.yaml</code> with your work.
+    </p>
+    <div class="portfolios">
+      {{ range site.Data.projects }}
+      <div class="portfolio-item">
+        <div class="image">
+          <img src="{{ .image | relURL }}" alt="" loading="lazy" width="640" height="400">
+          <div class="hover-items">
+            <h3>{{ .title }}</h3>
+            <div class="icons">
+              <a class="icon" href="{{ .github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub: {{ .title }}">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+  <section class="section sec4 blogs" id="blogs">
+    <div class="main-title">
+      <h2><span>Writing</span><span class="bg-text">Notes</span></h2>
+    </div>
+    <div class="blog-container">
+      {{ range site.Data.blog }}
+      <article class="blog">
+        <a href="{{ .url }}" class="blog-card-link"{{ if .external }} target="_blank" rel="noopener noreferrer"{{ end }}>
+          <div class="blog-image">
+            <img src="{{ .image | relURL }}" alt="" loading="lazy" width="640" height="255">
+          </div>
+          <div class="blog-text">
+            <h4>{{ .title }}</h4>
+            <p>{{ .summary }}</p>
+          </div>
+        </a>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+  <section class="section sec5 contact" id="contact">
+    <div class="main-title">
+      <h2>Contact <span>me</span><span class="bg-text">Hello</span></h2>
+    </div>
+    <div class="contact-container">
+      <div class="left-contact">
+        <h4>Let&rsquo;s talk</h4>
+        <p>{{ site.Params.availability }}</p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="icon">
+              <i class="fas fa-location-dot" aria-hidden="true"></i>
+              <span>Location</span>
+            </div>
+            <p>{{ site.Params.location }}</p>
+          </div>
+          <div class="contact-item">
+            <div class="icon">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+              <a href="{{ site.Params.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+            <p><a href="{{ site.Params.linkedin }}" target="_blank" rel="noopener noreferrer">Profile</a></p>
+          </div>
+          <div class="contact-item">
+            <div class="icon">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <span>Email</span>
+            </div>
+            <p><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
+          </div>
+        </div>
+        <div class="contact-icons">
+          <div class="icon">
+            <a href="{{ site.Params.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="icon">
+            <a href="{{ site.Params.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="right-contact">
+        <div class="contact-actions">
+          <p>
+            This site is static; there is no server-side form. The fastest way to reach me is email or LinkedIn.
+          </p>
+          <div class="action-row">
+            <a href="mailto:{{ site.Params.email }}" class="main-btn">
+              <span class="btn-text">Email</span>
+              <span class="btn-icon"><i class="fas fa-paper-plane" aria-hidden="true"></i></span>
+            </a>
+            <a href="{{ site.Params.github }}" class="main-btn" target="_blank" rel="noopener noreferrer">
+              <span class="btn-text">GitHub</span>
+              <span class="btn-icon"><i class="fab fa-github" aria-hidden="true"></i></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{{ end }}

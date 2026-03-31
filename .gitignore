@@ -2,3 +2,12 @@
 *.css.map
 *.sass.map
 *.scss.map
+
+# Hugo
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# Local tooling (optional Hugo binary)
+/.bin/
+.personal/

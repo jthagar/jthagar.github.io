@@ -1,0 +1,10 @@
+# Replace titles, images, and github URLs with your real projects.
+- title: "Project showcase"
+  image: "/img/project-placeholder.svg"
+  github: "https://github.com/jthagar"
+- title: "Open source"
+  image: "/img/project-placeholder.svg"
+  github: "https://github.com/jthagar"
+- title: "Web app"
+  image: "/img/project-placeholder.svg"
+  github: "https://github.com/jthagar"

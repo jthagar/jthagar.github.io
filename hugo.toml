@@ -1,0 +1,24 @@
+baseURL = "https://jthagar.github.io/"
+languageCode = "en-us"
+title = "Jay Hagar"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "Portfolio of Jay Hagar — software developer focused on Go, TypeScript, and the web."
+  author = "Jay Hagar"
+  tagline = "Software developer"
+  intro = "I build reliable web experiences and backend services, with a focus on Go, TypeScript, and modern frontend tooling."
+  about_lead = "University of North Texas Computer Science graduate. I care about clear interfaces, maintainable code, and systems that stay understandable as they grow."
+  location = "Denton, Texas"
+  availability = "Open to opportunities. Typical response within two business days."
+  email = "jaythagar@gmail.com"
+  github = "https://github.com/jthagar"
+  linkedin = "https://www.linkedin.com/in/jeffrey-t-hagar/"
+  cvURL = ""
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS"]
