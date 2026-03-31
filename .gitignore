@@ -11,3 +11,6 @@
 # Local tooling (optional Hugo binary)
 /.bin/
 .personal/
+
+# Local changelog (not versioned)
+changes.md

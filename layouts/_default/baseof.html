@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="{{ site.Language.Lang }}">
+<html lang="{{ site.Language.Lang }}" data-theme="dark">
 <head>
   {{- partial "head.html" . -}}
 </head>
-<body class="main-content">
-  <a class="skip-link" href="#home">Skip to content</a>
+<body class="site-body">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  {{- partial "site-header.html" . -}}
   {{- block "main" . }}{{ end -}}
-  {{- partial "nav-controls.html" . -}}
-  {{- partial "theme-toggle.html" . -}}
+  {{- partial "site-footer.html" . -}}
   {{- partial "scripts.html" . -}}
 </body>
 </html>

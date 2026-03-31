@@ -1,0 +1,195 @@
+// Sticky header, mobile drawer nav, footer
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  height: var(--site-header-h);
+  background-color: var(--color-surface-container-high);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--md-border-subtle);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: var(--site-header-h);
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+}
+
+.site-logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-on-surface);
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 0.35rem 0.5rem;
+  margin: -0.35rem -0.5rem;
+  border-radius: var(--md-shape-full);
+
+  &:hover {
+    text-decoration: none;
+    background-color: var(--md-state-hover);
+  }
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 0.15rem;
+}
+
+.site-nav__link {
+  color: var(--color-on-surface-variant);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--md-shape-full);
+  text-decoration: none;
+  transition:
+    background-color var(--md-sys-motion-duration-short) var(--md-sys-motion-easing),
+    color var(--md-sys-motion-duration-short) var(--md-sys-motion-easing);
+
+  &:hover {
+    text-decoration: none;
+    background-color: var(--md-state-hover);
+    color: var(--color-on-surface);
+  }
+
+  &.is-active {
+    color: var(--color-secondary);
+    background-color: var(--color-secondary-container);
+  }
+}
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.theme-toolbar-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: var(--md-shape-full);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-secondary-container);
+  color: var(--color-secondary);
+  box-shadow: none;
+  transition: background-color var(--md-sys-motion-duration-short) var(--md-sys-motion-easing);
+
+  .material-symbols-outlined {
+    font-size: 22px;
+    color: var(--color-secondary);
+  }
+
+  &:hover {
+    filter: brightness(1.08);
+  }
+}
+
+.nav-menu-btn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: var(--md-shape-full);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--color-on-surface);
+
+  .material-symbols-outlined {
+    font-size: 24px;
+  }
+}
+
+.nav-menu-btn__icon-close {
+  display: none;
+}
+
+.site-nav-open .nav-menu-btn__icon-open {
+  display: none;
+}
+
+.site-nav-open .nav-menu-btn__icon-close {
+  display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+  .site-nav {
+    position: fixed;
+    top: var(--site-header-h);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 1rem 1.25rem 2rem;
+    gap: 0.25rem;
+    background-color: var(--color-surface-container-high);
+    border-bottom: 1px solid var(--md-border-subtle);
+    transform: translateX(100%);
+    visibility: hidden;
+    transition:
+      transform var(--md-sys-motion-duration-medium) var(--md-sys-motion-easing),
+      visibility var(--md-sys-motion-duration-medium);
+    z-index: 150;
+    flex: none;
+  }
+
+  .site-nav-open .site-nav {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  .site-nav__link {
+    padding: 0.85rem 1rem;
+    font-size: 1.05rem;
+    border-radius: 12px;
+  }
+
+  .nav-menu-btn {
+    display: inline-flex;
+  }
+}
+
+.site-footer {
+  padding: 2.5rem 0;
+  margin-top: 2rem;
+  border-top: 1px solid var(--md-border-subtle);
+  background-color: var(--color-surface-container);
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-on-surface-variant);
+}
+
+.site-footer__copy a,
+.site-footer__note a {
+  color: var(--color-secondary);
+}

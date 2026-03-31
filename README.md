@@ -20,6 +20,16 @@ hugo --minify --gc
 
 Output is written to `public/` (ignored by git).
 
+## UI & JavaScript
+
+- **Layout**: Single scrolling page with a **sticky top bar** (logo, anchor links, theme toggle). **Mobile** uses a slide-in menu and body scroll lock. Content uses a centered **max-width container**; sections are stacked vertically (no full-screen “one panel at a time” mode).
+- **Behavior** (`assets/js/main.ts`, bundled with Hugo’s `js.Build`): smooth scrolling to in-page anchors, **scroll spy** (nav highlights the section in view), hash updates, dark/light theme with `localStorage` + `prefers-color-scheme`, mobile menu (Escape to close), Material-style **ink ripples** on interactive controls, and `prefers-reduced-motion` support.
+- **Look & feel**: [Material Design 3](https://m3.material.io/)–style tokens (surface, containers, elevation), **Roboto** + **Material Symbols**. **MUI** targets the same system but requires React for `@mui/material`.
+
+**If you want real MUI components later:** add a Vite + React (or Next.js) app, install `@mui/material` and `@emotion/react`, and either embed the SPA in a Hugo page or migrate the site. Intermediate options: [MUI Base](https://mui.com/base-ui/) with React, or [Material Web](https://github.com/material-components/material-web) components without React.
+
+**Other UI ideas (non-blocking):** skill chips instead of bars, MD3 **filled tonal buttons** sitewide, **snackbar** for “Email copied”, card elevation on portfolio tiles, and optional **scroll-snap** if you move from stacked sections to a scrolling layout.
+
 ## Editing content
 
 | What | Where |

@@ -1,149 +1,123 @@
-.controls {
-  position: fixed;
-  z-index: 10;
-  top: 50%;
-  right: 3%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transform: translateY(-50%);
+// Shared UI: Material symbols, ripples, buttons
 
-  .active-btn {
-    background-color: var(--color-secondary) !important;
-    transition: all 0.4s ease-in-out;
-
-    i {
-      color: var(--color-white) !important;
-    }
-  }
-
-  .control {
-    padding: 1rem;
-    cursor: pointer;
-    background-color: var(--color-grey-4);
-    border: none;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0.7rem 0;
-    box-shadow: var(--box-shadow-1);
-
-    i {
-      font-size: 1.2rem;
-      color: var(--color-grey-2);
-      pointer-events: none;
-    }
-  }
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  color: var(--color-on-surface-variant);
+  pointer-events: none;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
 }
 
-.theme-btn-con {
-  top: 3%;
-  right: 3%;
-  width: 60px;
-  height: 60px;
-  padding: 1rem;
+.md-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.md-ripple__wave {
+  position: absolute;
   border-radius: 50%;
-  position: fixed;
-  z-index: 11;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--color-grey-4);
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-  border: none;
+  background: rgba(255, 255, 255, 0.28);
+  pointer-events: none;
+  animation: md-ripple-fade 0.55s var(--md-sys-motion-easing) forwards;
+}
 
-  .theme-btn i {
-    font-size: 2rem;
-    color: var(--color-grey-1);
-  }
+html[data-theme="light"] .md-ripple__wave {
+  background: rgba(0, 0, 0, 0.1);
+}
 
-  &:hover {
-    background-color: var(--color-grey-1);
-    transition: all 0.4s ease-in-out;
-
-    i {
-      color: var(--color-grey-5);
-    }
-  }
-
-  &:active {
-    transform: translateY(-3px);
+@keyframes md-ripple-fade {
+  to {
+    opacity: 0;
+    transform: scale(1.75);
   }
 }
 
-.btn-con {
+.reduce-motion .md-ripple__wave {
+  animation: none;
+  opacity: 0;
+}
+
+.reduce-motion * {
+  transition-duration: 0.01ms !important;
+}
+
+.btn-con,
+.hero__actions {
   display: flex;
-  align-self: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hero__actions--stack {
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .main-btn {
-  border-radius: 30px;
-  color: inherit;
-  font-weight: 600;
-  position: relative;
-  border: 1px solid var(--color-secondary);
-  display: flex;
-  align-self: flex-start;
+  border-radius: var(--md-shape-full);
+  color: var(--color-on-surface);
+  font-weight: 500;
+  border: 1px solid var(--color-outline);
+  display: inline-flex;
   align-items: center;
   overflow: hidden;
   padding: 0;
+  background-color: var(--color-surface-container);
+  transition:
+    background-color var(--md-sys-motion-duration-short) var(--md-sys-motion-easing),
+    box-shadow var(--md-sys-motion-duration-short) var(--md-sys-motion-easing);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    background-color: var(--color-secondary-container);
+    box-shadow: var(--box-shadow-1);
+  }
 
   .btn-text {
-    padding: 0 2rem;
+    padding: 0 1.25rem;
   }
 
   .btn-icon {
     background-color: var(--color-secondary);
+    color: var(--color-on-secondary);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    padding: 1.1rem;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    transform: translateX(100%);
-    transition: all 0.7s ease-in-out;
-    z-index: -1;
-  }
-
-  &:hover::before {
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-secondary);
-    transform: translateX(0);
+    padding: 0.85rem;
   }
 }
 
-.main-title {
-  text-align: center;
+.main-btn--tonal {
+  border: 1px solid transparent;
+  background-color: var(--color-secondary-container);
+  color: var(--color-secondary);
+  padding: 0.65rem 1.35rem;
+  border-radius: var(--md-shape-full);
 
-  h2 {
-    position: relative;
-    text-transform: uppercase;
-    font-size: clamp(2rem, 5vw, 4rem);
-    font-weight: 700;
+  .btn-text {
+    padding: 0;
+  }
 
-    span {
-      color: var(--color-secondary);
-    }
-
-    .bg-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      color: var(--color-grey-5);
-      transition: all 0.4s ease-in-out;
-      z-index: -1;
-      transform: translate(-50%, -50%);
-      font-weight: 800;
-      font-size: clamp(2.5rem, 8vw, 5.8rem);
-    }
+  &:hover {
+    filter: brightness(1.05);
+    box-shadow: none;
   }
 }
