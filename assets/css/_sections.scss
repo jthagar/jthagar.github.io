@@ -1,4 +1,4 @@
-// Page sections: hero, about, projects, writing, contact
+// Page sections: hero, about, projects, contact
 
 .hero {
   position: relative;
@@ -366,62 +366,6 @@
     font-size: 18px;
     color: inherit;
   }
-}
-
-.writing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-
-.writing-card {
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--md-border-subtle);
-  background: var(--color-surface-container-high);
-  transition: box-shadow var(--md-sys-motion-duration-short) var(--md-sys-motion-easing);
-
-  &:hover {
-    box-shadow: var(--md-elevation-nav);
-  }
-}
-
-.writing-card__link {
-  display: block;
-  color: inherit;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: none;
-  }
-}
-
-.writing-card__image {
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
-  background: var(--color-grey-5);
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-.writing-card__content {
-  padding: 1.25rem;
-}
-
-.writing-card__title {
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: var(--color-on-surface);
-}
-
-.writing-card__summary {
-  font-size: 0.95rem;
-  color: var(--color-on-surface-variant);
 }
 
 .contact-grid {

@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="255" viewBox="0 0 640 255" role="img" aria-label="Article image placeholder">
-  <rect width="640" height="255" fill="#2a2e35"/>
-  <path d="M0 255 L640 0 L640 255 Z" fill="#396e35" opacity="0.2"/>
-  <text x="320" y="135" text-anchor="middle" fill="#6c7983" font-family="system-ui,sans-serif" font-size="18">Article</text>
-</svg>

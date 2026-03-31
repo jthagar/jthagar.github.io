@@ -122,30 +122,6 @@
     </div>
   </section>
 
-  <section class="section-block section-block--alt" id="blogs" aria-labelledby="writing-heading">
-    <div class="container">
-      <header class="section-head">
-        <h2 id="writing-heading" class="section-head__title">Writing</h2>
-        <p class="section-head__lede">Featured links and notes.</p>
-      </header>
-      <div class="writing-grid">
-        {{ range site.Data.blog }}
-        <article class="writing-card">
-          <a href="{{ .url }}" class="writing-card__link"{{ if .external }} target="_blank" rel="noopener noreferrer"{{ end }}>
-            <div class="writing-card__image">
-              <img src="{{ .image | relURL }}" alt="" loading="lazy" width="640" height="255">
-            </div>
-            <div class="writing-card__content">
-              <h3 class="writing-card__title">{{ .title }}</h3>
-              <p class="writing-card__summary">{{ .summary }}</p>
-            </div>
-          </a>
-        </article>
-        {{ end }}
-      </div>
-    </div>
-  </section>
-
   <section class="section-block" id="contact" aria-labelledby="contact-heading">
     <div class="container container--narrow">
       <header class="section-head">

@@ -39,7 +39,6 @@ Output is written to `public/` (ignored by git).
 | Stat tiles (hero/about) | `data/stats.yaml` |
 | Timeline | `data/timeline.yaml` |
 | Portfolio cards | `data/projects.yaml` |
-| Writing / featured links | `data/blog.yaml` |
 | Styles | `assets/css/` (Sass) |
 | Layout | `layouts/` |
 
