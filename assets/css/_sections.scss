@@ -311,13 +311,22 @@
       transform: scale(0);
       transition: all 0.4s ease-in-out;
 
-      h3 {
-        font-size: 1.5rem;
-        color: var(--color-white);
-        margin-bottom: 1.5rem;
-      }
+            h3 {
+                font-size: 1.5rem;
+                color: var(--color-white);
+                margin-bottom: 0.75rem;
+            }
 
-      .icons {
+            .portfolio-desc {
+                font-size: 0.85rem;
+                line-height: 1.45;
+                color: var(--color-grey-1);
+                text-align: center;
+                padding: 0 1rem 1rem;
+                max-width: 22rem;
+            }
+
+            .icons {
         display: flex;
         align-items: center;
         justify-content: center;

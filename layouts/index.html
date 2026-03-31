@@ -4,7 +4,7 @@
     <div class="left-header">
       <div class="header-shape" aria-hidden="true"></div>
       <div class="image">
-        <img src="{{ "img/avatar.svg" | relURL }}" width="400" height="480" alt="{{ site.Params.author }}">
+        <img src="{{ "img/headshot.jpg" | relURL }}" width="400" height="480" alt="{{ site.Params.author }}">
       </div>
     </div>
     <div class="right-header">
@@ -100,15 +100,16 @@
       <h2>My <span>Portfolio</span><span class="bg-text">My work</span></h2>
     </div>
     <p class="portfolio-text">
-      Selected projects and repositories. Replace placeholders in <code>data/projects.yaml</code> with your work.
+      Open-source and side projects from my GitHub. Screenshots are placeholders; see each repo for details.
     </p>
     <div class="portfolios">
       {{ range site.Data.projects }}
       <div class="portfolio-item">
         <div class="image">
-          <img src="{{ .image | relURL }}" alt="" loading="lazy" width="640" height="400">
+          <img src="{{ .image | relURL }}" alt="{{ .title }}" loading="lazy" width="640" height="400">
           <div class="hover-items">
             <h3>{{ .title }}</h3>
+            <p class="portfolio-desc">{{ .description }}</p>
             <div class="icons">
               <a class="icon" href="{{ .github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub: {{ .title }}">
                 <i class="fab fa-github" aria-hidden="true"></i>

@@ -1,15 +1,21 @@
-- icon: graduation-cap
-  duration: "2014 — 2018"
-  title: "Anthropology"
-  org: "University of Arkansas"
-  body: "Undergraduate work in anthropology before focusing on computing."
-- icon: graduation-cap
-  duration: "2019 — 2022"
-  title: "Computer Science"
-  org: "University of North Texas"
-  body: "B.S. Computer Science; coursework in algorithms, systems, and software engineering."
+# Most recent first
 - icon: briefcase
-  duration: "2022 — present"
-  title: "Developer"
-  org: "Freelance & projects"
-  body: "Web and tooling projects; open-source contributions and portfolio work."
+  duration: "Sept 2024 — June 2025"
+  title: "Software Engineer IV"
+  org: "Paycom · Grapevine, TX"
+  body: "DevOps and internal API work supporting developer workflows: Python, TypeScript, and Bash automation, on-call for production deployments, and cross-team troubleshooting."
+- icon: briefcase
+  duration: "Mar 2024 — Sept 2024"
+  title: "Team Lead, Software Engineering"
+  org: "Paycom · Grapevine, TX"
+  body: "Led engineers on delivery; helped ship an API-driven approach for automated remote repository updates; improved CI/CD build performance on core platform tooling."
+- icon: briefcase
+  duration: "July 2022 — Mar 2024"
+  title: "DevOps Software Engineer"
+  org: "Paycom · Grapevine, TX"
+  body: "Docker, Helm, and Kubernetes for internal orchestration; mentored developers on containerization; on-call for deployments and production incidents."
+- icon: graduation-cap
+  duration: "2022"
+  title: "B.S. Computer Science"
+  org: "University of North Texas · Denton, TX"
+  body: "Minor in Mathematics."

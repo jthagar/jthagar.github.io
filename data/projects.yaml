@@ -1,10 +1,14 @@
-# Replace titles, images, and github URLs with your real projects.
-- title: "Project showcase"
+- title: "go-zstd"
+  description: "Pure Go work toward RFC 8878 (Zstandard): frame and entropy parsing, constrained decompression paths, tests, and a small HTTP API—aligned with the reference implementation."
   image: "/img/project-placeholder.svg"
-  github: "https://github.com/jthagar"
-- title: "Open source"
+  github: "https://github.com/jthagar/go-zstd"
+
+- title: "Shipyard"
+  description: "Proof-of-concept: Helm-orchestrated Docker BuildKit swarm with shared build caches for faster image builds."
   image: "/img/project-placeholder.svg"
-  github: "https://github.com/jthagar"
-- title: "Web app"
+  github: "https://github.com/jthagar/shipyard"
+
+- title: "Covlet"
+  description: "Cross-platform desktop app (Fyne) for cover-letter templates using Go text/template—live editor, variable overrides, preview, and PDF export."
   image: "/img/project-placeholder.svg"
-  github: "https://github.com/jthagar"
+  github: "https://github.com/jthagar/covlet-app"

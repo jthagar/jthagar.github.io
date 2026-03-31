@@ -1,21 +1,21 @@
 baseURL = "https://jthagar.github.io/"
 languageCode = "en-us"
-title = "Jay Hagar"
+title = "June Hagar"
 enableRobotsTXT = true
 disableKinds = ["taxonomy", "term"]
 
 [params]
-  description = "Portfolio of Jay Hagar — software developer focused on Go, TypeScript, and the web."
-  author = "Jay Hagar"
-  tagline = "Software developer"
-  intro = "I build reliable web experiences and backend services, with a focus on Go, TypeScript, and modern frontend tooling."
-  about_lead = "University of North Texas Computer Science graduate. I care about clear interfaces, maintainable code, and systems that stay understandable as they grow."
-  location = "Denton, Texas"
-  availability = "Open to opportunities. Typical response within two business days."
-  email = "jaythagar@gmail.com"
+  description = "June Hagar — software engineer with experience in DevOps, CI/CD, and containerized platforms."
+  author = "June Hagar"
+  tagline = "Software engineer"
+  intro = "Software engineer with several years in enterprise engineering: DevOps, CI/CD, and on-premises Kubernetes. Day-to-day work included Python, TypeScript, and Bash for automation and internal tooling."
+  about_lead = "B.S. in Computer Science from the University of North Texas (minor in Mathematics). Work history includes developer tooling, pipeline work, Helm-based deployments, and on-call support for production releases."
+  location = "Olympia, WA"
+  availability = "Open to opportunities. I usually reply within a couple of business days."
+  email = "june.hagar@pm.me"
   github = "https://github.com/jthagar"
-  linkedin = "https://www.linkedin.com/in/jeffrey-t-hagar/"
-  cvURL = ""
+  linkedin = "https://www.linkedin.com/in/junehagar/"
+  cvURL = "/Resume-JH-2026.pdf"
 
 [markup.goldmark.renderer]
   unsafe = true

@@ -33,9 +33,9 @@ Output is written to `public/` (ignored by git).
 | Styles | `assets/css/` (Sass) |
 | Layout | `layouts/` |
 
-Replace `static/img/avatar.svg` with your photo, or point the image in `layouts/index.html` to a file under `static/`.
+The hero image is `static/img/headshot.jpg` (copied from `.personal` for the live site). The downloadable CV is `static/Resume-JH-2026.pdf`. You can swap or compress these files under `static/` as needed.
 
-Optional CV download: set `cvURL` in `hugo.toml` to a PDF path under `static/` (for example `"/cv/resume.pdf"`).
+Optional: regenerate from private copies in `.personal/` (that folder is gitignored).
 
 ## Deployment
 
