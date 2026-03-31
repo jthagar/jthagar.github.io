@@ -4,7 +4,8 @@
     <div class="hero__inner container">
       <div class="hero__visual">
         <div class="hero__frame">
-          <img src="{{ "img/headshot.jpg" | relURL }}" width="400" height="480" alt="{{ site.Params.author }}" fetchpriority="high">
+          <img src="{{ " img/headshot.jpg" | relURL }}" width="400" height="480" alt="{{ site.Params.author }}"
+            fetchpriority="high">
         </div>
       </div>
       <div class="hero__text">
@@ -18,7 +19,7 @@
             <span class="btn-icon"><i class="fas fa-download" aria-hidden="true"></i></span>
           </a>
           {{ else }}
-          <a href="{{ printf "mailto:%s" site.Params.email }}" class="main-btn">
+          <a href="{{ printf " mailto:%s" site.Params.email }}" class="main-btn">
             <span class="btn-text">Email me</span>
             <span class="btn-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
           </a>
@@ -106,11 +107,13 @@
       <div class="project-grid">
         {{ range site.Data.projects }}
         <article class="project-card">
-          <a href="{{ .github }}" class="project-card__media" target="_blank" rel="noopener noreferrer" aria-label="Open {{ .title }} on GitHub">
+          <a href="{{ .github }}" class="project-card__media" target="_blank" rel="noopener noreferrer"
+            aria-label="Open {{ .title }} on GitHub">
             <img src="{{ .image | relURL }}" alt="" loading="lazy" width="640" height="360">
           </a>
           <div class="project-card__body">
-            <h3 class="project-card__title"><a href="{{ .github }}" target="_blank" rel="noopener noreferrer">{{ .title }}</a></h3>
+            <h3 class="project-card__title"><a href="{{ .github }}" target="_blank" rel="noopener noreferrer">{{ .title
+                }}</a></h3>
             <p class="project-card__desc">{{ .description }}</p>
             <a class="project-card__link" href="{{ .github }}" target="_blank" rel="noopener noreferrer">
               Repository <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
@@ -154,10 +157,6 @@
               </div>
             </li>
           </ul>
-          <div class="contact-social">
-            <a href="{{ site.Params.linkedin }}" class="contact-social__btn md-ripple" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-            <a href="{{ site.Params.github }}" class="contact-social__btn md-ripple" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
-          </div>
         </div>
         <div class="contact-card contact-card--emphasis">
           <h3 class="contact-card__title">Quick actions</h3>
@@ -167,7 +166,8 @@
               <span class="btn-text">Email</span>
               <span class="btn-icon"><i class="fas fa-paper-plane" aria-hidden="true"></i></span>
             </a>
-            <a href="{{ site.Params.github }}" class="main-btn main-btn--tonal" target="_blank" rel="noopener noreferrer">
+            <a href="{{ site.Params.github }}" class="main-btn main-btn--tonal" target="_blank"
+              rel="noopener noreferrer">
               <span class="btn-text">GitHub</span>
               <span class="btn-icon"><i class="fab fa-github" aria-hidden="true"></i></span>
             </a>
