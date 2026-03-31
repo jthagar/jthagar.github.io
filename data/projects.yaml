@@ -11,4 +11,4 @@
 - title: "Covlet"
   description: "Cross-platform desktop app (Fyne) for cover-letter templates using Go text/template—live editor, variable overrides, preview, and PDF export."
   image: "/img/projects/covlet.jpg"
-  github: "https://github.com/jthagar/covlet-app"
+  github: "https://github.com/jthagar/covlet"
